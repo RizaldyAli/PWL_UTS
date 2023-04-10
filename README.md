@@ -1,2 +1,2 @@
 # PWL_UTS
-Ujian Tengah Seemster PWL 
+Ujian Tengah Semester PWL 
