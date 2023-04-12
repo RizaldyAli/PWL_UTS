@@ -3,13 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>UTS PWL</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/all.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/solid.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/fontawesome.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/fontawesome.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/regular.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/plugins/fontawesome-free/css/regular.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
+  {{-- Favicon --}}
+  <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon/thumb-favicon.png') }}">
   @stack('css_tambahan')
 </head>
 <body class="hold-transition sidebar-mini">

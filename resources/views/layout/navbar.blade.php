@@ -12,7 +12,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                 <i class="fas fa-search"></i>
             </a>
@@ -31,7 +31,7 @@
                     </div>
                 </form>
             </div>
-        </li>
+        </li> --}}
 
         {{-- <!-- Messages Dropdown Menu -->
         <li class="nav-item dropdown">
@@ -128,5 +128,15 @@
                 <i class="fas fa-th-large"></i>
             </a>
         </li> --}}
+
+        
+        <li class="nav-item">
+            <div class="nav flex-end">
+                <a href="{{ url('/logout')}}" class="btn btn-danger">
+                    <i class="nav-icon fas fa-sign-out-alt"></i>
+                </a>
+            </div>
+        </li>
+
     </ul>
 </nav>

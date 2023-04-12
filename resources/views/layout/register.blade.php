@@ -26,26 +26,34 @@
 
       <form action="{{ url ('/register') }}" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Username">
+          <input name="username" type="text" class="form-control" placeholder="Username">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-user"></span>
+              <span class="fas fa-user" style="color: #1e3050;"></span>
             </div>
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="E-mail">
+          <input name="name" type="text" class="form-control" placeholder="Full Name">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user" style="color: #1e3050;"></span>
             </div>
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input name="email" type="email" class="form-control" placeholder="E-mail">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+              <span class="fas fa-envelope" style="color: #1e3050;"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input name="password" type="password" class="form-control" placeholder="Password">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock" style="color: #1e3050;"></span>
             </div>
           </div>
         </div>
@@ -72,10 +80,10 @@
 <!-- /.register-box -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
 </body>
 </html>
