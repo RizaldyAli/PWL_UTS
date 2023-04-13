@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('karyawan', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama', 50)->nullable();
-            $table->string('ttl',50)->nullable();
-            $table->string('email')->nullable()->unique();
-            $table->string('alamat')->nullable();
-            $table->timestamps();
+        Schema::table('karyawan', function(Blueprint $table){
+            $table->string('nip')->after ('id')->nullable()->unique()->index();
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -30,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('karyawans');
+        Schema::dropIfExists('nip_column');
     }
 };
