@@ -17,7 +17,9 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
+    <img src="{{ asset('assets/images/favicon/company.png') }}" style="opacity: .7" width="200px">
+    <br>
+    <a href="#"><b>Admin</b>LTE</a>
   </div>
 
   <div class="card">
@@ -34,6 +36,7 @@
               <span class="fas fa-user" style="color: #1e3050;"></span>
             </div>
           </div>
+
           @error('username')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
@@ -46,6 +49,7 @@
               <span class="fas fa-user" style="color: #1e3050;"></span>
             </div>
           </div>
+
           @error('name')
             <span class="error invalid-feedback" >{{ $message }} </span>
           @enderror
@@ -58,6 +62,7 @@
               <span class="fas fa-envelope" style="color: #1e3050;"></span>
             </div>
           </div>
+
           @error('email')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
@@ -70,6 +75,7 @@
               <span class="fas fa-lock" style="color: #1e3050;"></span>
             </div>
           </div>
+
           @error('password')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror

@@ -34,7 +34,6 @@
       </div>
     </div>
     <div class="card-body">
-      <a href="{{url('perusahaan/create')}}" class="btn btn-sm btn-success my-2">Tambah Data</a>
       <table class="table table-bordered table-sttriped">
         <thead>
           <tr>
@@ -60,14 +59,12 @@
                 <td>
                   <a href="{{url('/perusahaan/'. $p->id . '/edit')}}" class="btn btn-sm btn-warning">Edit</a>
 
-                  <form method="POST" action="{{ url('/perusahaan/' . $p->id) }}">
+                  <form method="POST" action="{{ url('/perusahaan/' . $p->id) }}" class="d-inline pl-2">
                     @csrf
                     @method('DELETE')
-                    <button type="submit"  class="btn btn-sm btn-danger">Hapus</button>
+                    <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
                   </form>
-
                 </td>
-
               </tr>
             @endforeach
 
@@ -79,11 +76,14 @@
         </tbody>
 
       </table>
+      <div class="d-flex justify-content-end">
+        <a href="{{url('perusahaan/create')}}" class="btn btn-sm btn-success my-2">Tambah Data</a>
+      </div>
     </div>
-    <!-- /.card-body -->
+
     <div class="card-footer">
       Footer Perusahaan
     </div>
-    <!-- /.card-footer-->
+
   </div>
 @endsection

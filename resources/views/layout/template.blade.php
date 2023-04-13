@@ -17,7 +17,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('assets/dist/css/adminlte.min.css') }}">
   {{-- Favicon --}}
-  <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon/thumb-favicon.png') }}">
+  <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon/company.png') }}">
   @stack('css_tambahan')
 </head>
 <body class="hold-transition sidebar-mini">

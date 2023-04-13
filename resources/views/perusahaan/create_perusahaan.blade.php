@@ -39,28 +39,28 @@
         {!! (isset($prsh))? method_field('PUT') : ''!!}
         <div class="form-group">
           <label>Nama</label>
-          <input class="form-control @error('nama') is-invalid @enderror" value="{{ isset($perushaan)? $perusahaan->nama : old('nama') }}" name="nama" type="text"/>
+          <input class="form-control @error('nama') is-invalid @enderror" value="{{ isset($prsh)? $prsh->nama : old('nama') }}" name="nama" type="text"/>
           @error('nama')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
         </div>
         <div class="form-group">
           <label>Website</label>
-          <input class="form-control @error('website') is-invalid @enderror" value="{{ isset($perusahaan)? $perusahaan->website : old('website') }}" name="website" type="text"/>
+          <input class="form-control @error('website') is-invalid @enderror" value="{{ isset($prsh)? $prsh->website : old('website') }}" name="website" type="text"/>
           @error('website')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
         </div>
         <div class="form-group">
           <label>E-mail</label>
-          <input class="form-control @error('email') is-invalid @enderror" value="{{ isset($perusahaan)? $perusahaan->email : old('email') }}" name="email" type="text"/>
+          <input class="form-control @error('email') is-invalid @enderror" value="{{ isset($prsh)? $prsh->email : old('email') }}" name="email" type="text"/>
           @error('email')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
         </div>
         <div class="form-group">
           <label>Alamat</label>
-          <input class="form-control @error('alamat') is-invalid @enderror" value="{{ isset($perusahaan)? $perusahaan->alamat : old('alamat') }}" name="alamat" type="text"/>
+          <input class="form-control @error('alamat') is-invalid @enderror" value="{{ isset($prsh)? $prsh->alamat : old('alamat') }}" name="alamat" type="text"/>
           @error('alamat')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
