@@ -90,6 +90,7 @@
         </tbody>
 
       </table>
+      {{ $karyawan->links() }}
     </div>
     <!-- /.card-body -->
     <div class="card-footer">

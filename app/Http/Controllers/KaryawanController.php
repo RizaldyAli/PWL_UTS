@@ -20,12 +20,12 @@ class KaryawanController extends Controller
                 ->orWhere('nip', 'like', '%' . $request->search . '%')
                 ->orWhere('alamat', 'like', '%' . $request->search . '%')
                 ->orWhere('email', 'like', '%' . $request->search . '%')
-                ->paginate(5);
+                ->paginate(3);
             return view('karyawan.karyawan')
                 ->with('karyawan', $data);
         }
 
-        $karyawan = KaryawanModel::all();
+        $karyawan = KaryawanModel::paginate(3);
         return view('karyawan.karyawan')
         ->with('karyawan', $karyawan);
     }
