@@ -42,7 +42,8 @@
             </div>
           </div>
         </div>
-        <div class="row">
+
+        {{-- <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
@@ -51,12 +52,15 @@
               </label>
             </div>
           </div>
-          <!-- /.col -->
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
-          <!-- /.col -->
+        </div> --}}
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Login</button>
         </div>
+
       </form>
 
       {{-- <div class="social-auth-links text-center mb-3">
@@ -73,14 +77,10 @@
       {{-- <p class="mb-1">
         <a href="forgot-password.html">I forgot my password</a>
       </p> --}}
-      <p class="mb-0">
         <a href="{{ url('/register') }}" class="text-center">Register a new membership</a>
-      </p>
     </div>
-    <!-- /.login-card-body -->
   </div>
 </div>
-<!-- /.login-box -->
 
 <!-- jQuery -->
 <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
