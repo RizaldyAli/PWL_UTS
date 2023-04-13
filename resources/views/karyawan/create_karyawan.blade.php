@@ -40,7 +40,7 @@
         <div class="form-group">
           <label>NIP</label>
           <input class="form-control @error('nip') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->nip : old('nip') }}" name="nip" type="text"/>
-          @error('nama')
+          @error('nip')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
         </div>
@@ -52,9 +52,16 @@
           @enderror
         </div>
         <div class="form-group">
-          <label>Tempat, Tanggal Lahir</label>
+          <label>Tempat Lahir</label>
           <input class="form-control @error('ttl') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->ttl : old('ttl') }}" name="ttl" type="text"/>
-          @error('website')
+          @error('ttl')
+            <span class="error invalid-feedback">{{ $message }} </span>
+          @enderror
+        </div>
+        <div class="form-group">
+          <label>Tanggal Lahir</label>
+          <input class="form-control @error('tanggalLahir') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->tanggalLahir : old('tanggalLahir') }}" name="tanggalLahir" type="date"/>
+          @error('tanggalLahir')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
         </div>

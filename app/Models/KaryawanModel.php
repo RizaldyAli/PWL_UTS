@@ -16,6 +16,7 @@ class KaryawanModel extends Model
         'nip',
         'nama',
         'ttl',
+        'tanggalLahir',
         'email',
         'alamat'
     ];

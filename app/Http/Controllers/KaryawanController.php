@@ -53,6 +53,7 @@ class KaryawanController extends Controller
             'nip' => 'required|string|max:50',
             'nama' => 'required|string|max:50',
             'ttl' => 'required|string|max:50',
+            'tanggalLahir' => 'required|date',
             'email' => 'required|string|max:50',
             'alamat' => 'required|string|max:255'
         ]);
@@ -101,6 +102,7 @@ class KaryawanController extends Controller
             'nip' => 'required|string|max:50',
             'nama' => 'required|string|max:50',
             'ttl' => 'required|string|max:50',
+            'tanggalLahir' => 'required|date',
             'email' => 'required|string|max:50',
             'alamat' => 'required|string|max:255'
         ]);
