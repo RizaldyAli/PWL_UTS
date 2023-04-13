@@ -34,6 +34,17 @@
       </div>
     </div>
     <div class="card-body">
+        <a href="{{url('perusahaan/create')}}" class="btn btn-sm btn-success my-2">Tambah Data</a>
+        <form action="{{url('perusahaan')}}" method="get">
+          <div class="input-group mb-3 w-25">
+              <input type="text" name="search" class="form-control" placeholder="Search"
+                     value="{{request()->search}}">
+              <div class="input-group-append">
+                  <button class="btn btn-primary" type="submit">Search</button>
+              </div>
+          </div>
+        </form>
+
       <table class="table table-bordered table-sttriped">
         <thead>
           <tr>
@@ -76,9 +87,8 @@
         </tbody>
 
       </table>
-      <div class="d-flex justify-content-end">
-        <a href="{{url('perusahaan/create')}}" class="btn btn-sm btn-success my-2">Tambah Data</a>
-      </div>
+      {{ $prsh->links() }}
+
     </div>
 
     <div class="card-footer">

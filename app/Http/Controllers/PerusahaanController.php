@@ -12,9 +12,19 @@ class PerusahaanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $prsh = PerusahaanModel::all();
+        if ($request->has('search')) {
+            $data = PerusahaanModel::where('nama', 'like', '%' . $request->search . '%')
+                ->orWhere('website', 'like', '%' . $request->search . '%')
+                ->orWhere('alamat', 'like', '%' . $request->search . '%')
+                ->orWhere('email', 'like', '%' . $request->search . '%')
+                ->paginate(3);
+            return view('perusahaan.perusahaan')
+                ->with('prsh', $data);
+        }
+
+        $prsh = PerusahaanModel::paginate(3);
         return view('perusahaan.perusahaan')
         ->with('prsh', $prsh);
     }
@@ -83,7 +93,7 @@ class PerusahaanController extends Controller
      * @param  \App\Models\Perusahaan  $perusahaan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PerusahaanModel $id)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'nama' => 'required|string|max:50',

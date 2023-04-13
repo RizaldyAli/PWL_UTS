@@ -66,7 +66,7 @@
           @enderror
         </div>
         <div class="form-group">
-          <button class="btn btn-sm btn-primary float-right my-2"><i class="fas fa-save pr-1"></i>Simpan</button>
+          <button type="submit" class="btn btn-sm btn-primary float-right my-2"><i class="fas fa-save pr-1"></i>Simpan</button>
           <a href="{{url('perusahaan')}}" class="btn btn-default"><i class="fas fa-arrow-left pr-1"></i>Cancel</a>
         </div>
       </form>
