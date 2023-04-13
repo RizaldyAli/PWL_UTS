@@ -15,4 +15,5 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index']);
 
     Route::resource('/perusahaan', PerusahaanController::class)->parameter('perusahaan', 'id');
+    Route::resource('/karyawan', KaryawanController::class)->parameter('karyawan', 'id');
 });
