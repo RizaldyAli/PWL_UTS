@@ -24,7 +24,10 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="{{ url ('/register') }}" method="post">
+      {{-- <form action="register" method="post">
+        @csrf
+        {!! (isset($usr))? method_field('PUT') : '' !!}
+        
         <div class="input-group mb-3">
           <input name="username" type="text" class="form-control" placeholder="Username">
           <div class="input-group-append">
@@ -33,6 +36,7 @@
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
           <input name="name" type="text" class="form-control" placeholder="Full Name">
           <div class="input-group-append">
@@ -41,6 +45,7 @@
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
           <input name="email" type="email" class="form-control" placeholder="E-mail">
           <div class="input-group-append">
@@ -49,6 +54,7 @@
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
           <input name="password" type="password" class="form-control" placeholder="Password">
           <div class="input-group-append">
@@ -57,6 +63,7 @@
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
@@ -66,18 +73,54 @@
               </label>
             </div>
           </div>
-          <!-- /.col -->
+
           <div class="col-4">
             <button type="submit" class="btn btn-primary btn-block">Register</button>
           </div>
-          <!-- /.col -->
         </div>
+      </form> --}}
+
+      <form method="POST" action="register">
+        @csrf
+        {!! (isset($usr))? method_field('PUT') : ''!!}
+        <div class="input-group mb-3">
+          <input class="form-control @error('username') is-invalid @enderror" value="{{ isset($usr)? $usr->username : old('username') }}" name="username" type="text" placeholder="Username">
+          @error('username')
+            <span class="error invalid-feedback">{{ $message }} </span>
+          @enderror
+          
+        </div>
+        <div class="input-group mb-3">
+          <input class="form-control @error('name') is-invalid @enderror" value="{{ isset($usr)? $usr->name : old('name') }}" name="name" type="text" placeholder="Full name">
+          @error('name')
+            <span class="error invalid-feedback" >{{ $message }} </span>
+          @enderror
+          
+        </div>
+        <div class="input-group mb-3">
+          <input class="form-control @error('email') is-invalid @enderror" value="{{ isset($usr)? $usr->name : old('email') }}" name="email" type="email" placeholder="Email">
+          @error('email')
+            <span class="error invalid-feedback">{{ $message }} </span>
+          @enderror
+          
+        </div>
+        <div class="input-group mb-3">
+          <input class="form-control @error('password') is-invalid @enderror" value="{{ isset($usr)? $usr->password : old('password') }}" name="password" type="password" placeholder="Password">
+          @error('password')
+            <span class="error invalid-feedback">{{ $message }} </span>
+          @enderror
+          
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block">Register</button>
+        </div>
+      </form>
+
       <a href="{{ url('/login') }}" class="text-center">I already have a membership</a>
     </div>
-    <!-- /.form-box -->
-  </div><!-- /.card -->
+  </div>
 </div>
-<!-- /.register-box -->
+
 
 <!-- jQuery -->
 <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
