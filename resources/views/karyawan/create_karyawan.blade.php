@@ -67,7 +67,7 @@
         </div>
         <div class="form-group">
           <label>E-mail</label>
-          <input class="form-control @error('email') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->email : old('email') }}" name="email" type="text"/>
+          <input class="form-control @error('email') is-invalid @enderror" value="{{ isset($karyawan)? $karyawan->email : old('email') }}" name="email" type="email"/>
           @error('email')
             <span class="error invalid-feedback">{{ $message }} </span>
           @enderror
